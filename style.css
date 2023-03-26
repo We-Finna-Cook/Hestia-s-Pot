@@ -1,0 +1,12 @@
+#sectionBg{
+    background-image: url(bgImage.jpg) ;
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
+}
+
+#box h1{
+    font-size: 3.5rem;
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+}
