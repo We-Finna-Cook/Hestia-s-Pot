@@ -10,12 +10,22 @@
     <script defer src="test.js"></script>
 </head>
 <body>
+    <!-- logo -->
     <nav class="navbar is-white">
         <div class="navbar-brand">
             <a class="navbar-item py-2">
                 <img src="logo.png" style="max-height: 70px"/>
             </a>
+        
+        <!-- hamburger -->
+        <a class="navbar-burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
         </div>
+        
+        <!-- navbar options -->
         <div class="navbar-menu" id="nav-links">
             <div class="navbar-end">
                 <a class="navbar-item">Home</a>
@@ -23,11 +33,15 @@
             </div>
         </div>
     </nav>
+
+    <!-- landing -->
     <section class="section is-medium" id="sectionBg">
         <div class="container py-6" id="box">
             <h1 class="has-text-centered has-text-weight-bold has-text-white">Hestia's Pot</h1>
             <h2 class="is-size-4 has-text-centered has-text-white">#1 Place For Recipes</h1>
         </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
