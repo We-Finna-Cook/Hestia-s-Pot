@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,27 +9,28 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
     <!-- logo -->
     <nav class="navbar is-fixed-top is-white">
         <div class="navbar-brand">
             <a class="navbar-item py-2">
-                <img src="assets/logo.png" style="max-height: 70px"/>
+                <img src="assets/logo.png" style="max-height: 70px" />
             </a>
-        
-        <!-- hamburger -->
-        <a class="navbar-burger mt-4" id="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
+
+            <!-- hamburger -->
+            <a class="navbar-burger mt-4" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
         </div>
-        
+
         <!-- navbar options -->
         <div class="navbar-menu" id="nav-links">
             <div class="navbar-end">
-                <a href ='index.html' class="navbar-item">Home</a>
-                <a href ='about.html' class="navbar-item">About Us</a>
+                <a href='index.html' class="navbar-item">Home</a>
+                <a href='about.html' class="navbar-item">About Us</a>
             </div>
         </div>
     </nav>
@@ -36,11 +38,19 @@
     <!-- landing -->
     <section class="section is-medium" id="sectionBg">
         <div class="container py-6" id="box">
-            <h1 class="has-text-centered has-text-weight-bold has-text-white">Hestia's Pot</h1>
+            <h1 class="has-text-centered has-text-weight-bold has-text-white mt-6">Hestia's Pot</h1>
             <h2 class="is-size-4 has-text-centered has-text-white">#1 Place For Recipes</h1>
         </div>
     </section>
+    <h1 class="is-size-3 has-text-centered my-5">Need a recipe? Search for a meal</h1>
+    <div>
+        <form id="search">
+            <input class="input is-rounded" type="text" placeholder="Search for meals" id="searchBar">
+            <!-- <button class='button is-warning' type="submit" value="Search">Search</button> -->
+        </form>
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
