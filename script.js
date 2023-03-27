@@ -4,8 +4,6 @@ let search = document.querySelector('#search')
 let searchInput = document.querySelector('#searchBar')
 const tabs = document.querySelectorAll('.tabs li')
 const tabContentBoxes = document.querySelectorAll('#tab-content > div')
-// const headShots = document.querySelector('#about-picture') 
-
 const currentAboutPicture = document.querySelector('#about-picture');
 
 burger.addEventListener('click', (event) =>{

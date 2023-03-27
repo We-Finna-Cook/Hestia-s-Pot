@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- logo -->
-    <nav class="navbar is-fixed-top is-white">
+    <nav class="navbar is-fixed-top is-white" id="nav">
         <div class="navbar-brand">
             <a class="navbar-item py-2">
                 <img src="assets/logo.png" style="max-height: 70px"/>
@@ -33,14 +33,14 @@
         </div>
     </nav>
 
-    <section class="section mt-6 has-text-centered">
-            <h1 class="title">
+    <section class="section mt-6 has-text-centered" id="aboutUsStrip">
+            <h1 class="is-size-2 has-text-weight-bold">
                 Who Are We?
             </h1>
     </section>
 
     <!-- section for tabbed -->
-    <section class="section">
+    <section class="section" id="aboutSection">
         <div class="container">
           <div class="columns">
             <div class="column is-7">
@@ -59,18 +59,21 @@
               <!-- tabbed content -->
               <div class="px-2" id="tab-content">
                 <div id="Oshaun">
-                  <h3 class="is-size-5 title">Oshaun</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet ratione in voluptates. Iste, deleniti dolore ex eum nisi reiciendis reprehenderit eveniet dicta eaque debitis eius quod! Magnam eaque quia distinctia.</p>
+                  <h3 class="is-size-5 title">O'Shaun</h3>
+                  <p>Hello and welcome to our recipe website! My name is O'Shaun and I'm excited to be a part of this project. As a Software Engineer, I'm constantly seeking out new challenges and opportunities to learn and grow. I believe that technology can be a powerful tool to make our lives more efficient and connected. That's why I'm excited to be a part of this project, where we can leverage the latest tools and techniques to create a platform that inspires and empowers people to cook and create. I believe that a balanced lifestyle is essential to our overall well-being, and that includes eating healthy, delicious meals.Thank you for visiting our website and I hope you find our recipes and resources helpful and inspiring. If you have any questions or feedback, please don't hesitate to reach out to me.</p>
+                  <p>Best,
+                    O'Shaun</p>
                 </div>
                 <div id="Randy" class="is-hidden">
                   <h3 class="is-size-5 title">Randy</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet ratione in voluptates. Iste, deleniti dolore ex eum nisi reiciendis reprehenderit eveniet dicta eaque debitis eius quod! Magnam eaque quia distinctio.</p>
+                  <p>Hello and welcome to our recipe website! My name is Randy and I'm thrilled to be working on this project. As a Software Engineer, I'm dedicated to creating visually impressive projects that are both creative and efficient. I believe that software development is an art form and that the best projects are those that seamlessly blend aesthetics with functionality. I am dedicated to creating visually stunning projects that are not only efficient but also elevate the user experience to a whole new level.Thank you for visiting our website and I hope you find our recipes and resources helpful and inspiring. If you have any questions or feedback, please don't hesitate to reach out to me.</p>
                 </div>
               </div>
             </div>
 
-            <div id="OshaunImg" class="column is-5">
-                <div class="has-text-centered box has-background-warning-light" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+            <!-- image -->
+            <div id="secondColumn" class="column is-5">
+                <div class="has-text-centered has-background-warning-light" style="display: flex; justify-content: center; align-items: center; height: 100%;">
                   <figure class="image is-inline-block; ">
                     <img id="about-picture" class="is-rounded" style="width:350px;" src="assets/MARCY_HEADSHOTS-525.jpg" alt="Picture of Oshaun"/>
                   </figure>
