@@ -4,6 +4,9 @@ let search = document.querySelector('#search')
 let searchInput = document.querySelector('#searchBar')
 const tabs = document.querySelectorAll('.tabs li')
 const tabContentBoxes = document.querySelectorAll('#tab-content > div')
+// const headShots = document.querySelector('#about-picture') 
+
+const currentAboutPicture = document.querySelector('#about-picture');
 
 burger.addEventListener('click', (event) =>{
     event.preventDefault();
@@ -23,8 +26,15 @@ tabs.forEach((tab) => {
                 box.classList.add('is-hidden')
             }
         })
+
+            if (target === 'Oshaun') {
+                currentAboutPicture.src = 'assets/MARCY_HEADSHOTS-525.jpg';;
+              } else if (target === 'Randy') {
+                currentAboutPicture.src = 'assets/logo.png';
+              }
     })
 })
+
 let ul = document.querySelector('#searchList')
 search.addEventListener('submit', (e) => {
     e.preventDefault();
