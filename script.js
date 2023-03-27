@@ -33,29 +33,23 @@ tabs.forEach((tab) => {
     })
 })
 
-let ul = document.querySelector('#searchList')
-search.addEventListener('submit', (e) => {
-    e.preventDefault();
-    let value = searchInput.value
-    fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=' + value)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data)
-        ul.innerHTML = '';
-        if(data.meals){
-            for(let dish of data.meals){
-            let li = document.createElement('li');
-            li.innerText = dish.strMeal
-            ul.append(li);
-        }}
-        else{
-            let li = document.createElement('li');
-            li.innerText = "Sorry, no meals found"
-            ul.append(li);
-        }
-    })
-    searchInput.value = '';
-})
+// search.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     let value = searchInput.value
+//     fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=' + value)
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log(data)
+//         ul.innerHTML = '';
+//         if(data.meals){
+            
+//         }}
+//         else{
+            
+//         }
+//     })
+//     searchInput.value = '';
+// })
 
 fetch('http://www.themealdb.com/api/json/v1/1/filter.php?c=goat').then(response => response.json())
 .then(data => console.log(data))
