@@ -32,40 +32,49 @@
         </div>
     </nav>
 
-    <!-- section for tabbed -->
-    <section class="section mt-6">
-        <div class="container">
-            <div class="columms is-8 is-variable">
-                <div class="column is-7 tablet">
-                    <!-- tabbed content -->
-                    <div class="tabs is-boxed">
-                        <ul>
-                            <li class="is-active">
-                                <a>Oshaun</a>
-                            </li>
-                            <li>
-                                <a>Randy</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="px-2" id="tab-content">
-                        <div id="Oshaun">
-                            <h3 class="is-size-5 title">Oshaun</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet ratione in voluptates. Iste, deleniti dolore ex eum nisi reiciendis reprehenderit eveniet dicta eaque debitis eius quod! Magnam eaque quia distinctio.</p>
-                        </div>
-                    </div>
-                    <div class="px-2" id="tab-content">
-                        <div id="Randy">
-                            <h3 class="is-size-5 title">Randy</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet ratione in voluptates. Iste, deleniti dolore ex eum nisi reiciendis reprehenderit eveniet dicta eaque debitis eius quod! Magnam eaque quia distinctio.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="column is-5 tablet">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad officia voluptate doloribus illum expedita earum quisquam ab. Ipsam atque accusamus porro eius, repellat, eveniet quia recusandae magni beatae corrupti accusantium.</p>
-                </div>
-            </div>
-        </div>
+    <section class="section mt-6 has-text-centered">
+            <h1 class="title">
+                Who Are We?
+            </h1>
     </section>
+
+    <!-- section for tabbed -->
+    <section class="section">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-6">
+              <!-- tabbed names and style -->
+              <div class="tabs is-boxed">
+                <ul>
+                  <li class="is-active" data-target='Oshaun'>
+                    <a>Oshaun</a>
+                  </li>
+                  <li data-target='Randy'>
+                    <a>Randy</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- tabbed content -->
+              <div class="px-2" id="tab-content">
+                <div id="Oshaun">
+                  <h3 class="is-size-5 title">Oshaun</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet ratione in voluptates. Iste, deleniti dolore ex eum nisi reiciendis reprehenderit eveniet dicta eaque debitis eius quod! Magnam eaque quia distinctia.</p>
+                </div>
+                <div id="Randy" class="is-hidden">
+                  <h3 class="is-size-5 title">Randy</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet ratione in voluptates. Iste, deleniti dolore ex eum nisi reiciendis reprehenderit eveniet dicta eaque debitis eius quod! Magnam eaque quia distinctio.</p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-6">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad officia voluptate doloribus illum expedita earum quisquam ab. Ipsam atque accusamus porro eius, repellat, eveniet quia recusandae magni beatae corrupti accusantium.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script src="script.js"></script>
+      
 </body>
 </html>
