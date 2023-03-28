@@ -80,36 +80,23 @@
               
           </div>
         </div>
-    
 
-    <!-- need to add tab content -->
-
-    <!-- <h1 class="is-size-3 has-text-centered my-5 has-text-weight-bold">Need a recipe? Search for a meal</h1>
-
-    search
-    <div>
-        <form class='pb-6' id="search">
-            <input class="input is-rounded is-warning" autocomplete="off" type="text" placeholder="Search for meals"
-                id="searchBar">
-        </form>
-    </div>
-     -->
-    <!-- Columns for Cards -->
-    <!-- <div class="conatiner">
-        <h3 id="searchStatus" class="title has-text-centered is-size-4"></h3>
-        <div id="searchColumns" class="columns mt-5 is-8 is-variable is-multiline">
-        </div>
-    </div>
-     -->
-
-     <!-- modal -->
-     <!-- <div class="modal is-active">
-        <div class="modal-background">
-           <div class="modal-content has-background-white py-5 px-5 ">
-            <h3 class="title mb-6">Join The Club</h3>
-           </div>
-        </div>
-     </div> -->
+        <div class="modal" id="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p id = "modalTitle" class="modal-card-title">Modal title</p>
+                <button class="delete" id='modalClose' aria-label="close"></button>
+              </header>
+              <section class="modal-card-body">
+                <!-- Content ... -->
+                <h3 class="has-text-weight-bold is-size-5">Ingredients</h3>
+                <p id="ingredientsText"></p>
+                <h3 class="has-text-weight-bold my-5 is-size-5">Instructions</h3>
+                <p id="instructionsText"></p>
+              </section>
+            </div>
+          </div>
 
     <script src="script.js"></script>
 </body>

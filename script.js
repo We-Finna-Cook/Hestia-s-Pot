@@ -6,7 +6,10 @@ const tabs = document.querySelectorAll('.tabs li')
 const tabContentBoxes = document.querySelectorAll('#tab-content > div');
 const currentAboutPicture = document.querySelector('#about-picture');
 const searchColumns = document.querySelector('#searchColumns');
-const searchStatus = document.querySelector('#searchStatus')
+const searchStatus = document.querySelector('#searchStatus');
+let modalStatus = document.querySelector('#modal');
+let modalTitle = document.querySelector('#modalTitle');
+let modalInstruction = document.querySelector('#instructionsText')
 
 burger.addEventListener('click', (event) => {
     event.preventDefault();
@@ -73,6 +76,7 @@ search.addEventListener('submit', (e) => {
                     dishName.innerText = meal.strMeal;
                     cardContentDiv.appendChild(dishName);
 
+
                     let instructionP = document.createElement('p');
                     instructionP.classList.add("card-footer-item");
                     let instructionA = document.createElement('a');
@@ -93,6 +97,12 @@ search.addEventListener('submit', (e) => {
                         cardFooter.appendChild(videoP);
                     }
                     searchColumns.appendChild(columnDiv);
+
+                    instructionA.addEventListener('click', () => {
+                        modalTitle.innerText = meal.strMeal;
+                        modalInstruction.innerText = meal.strInstructions;
+                        modalStatus.classList.add('is-active');
+                    })
                 }
             }
             else {
@@ -102,6 +112,23 @@ search.addEventListener('submit', (e) => {
     searchInput.value = '';
 })
 
+let modalClose = document.querySelector('#modalClose');
+modalClose.addEventListener('click', () =>{
+    modalStatus.classList.remove('is-active');
+})
+
 // fetch('http://www.themealdb.com/api/json/v1/1/categories.php').then(response => response.json())
 // .then(data => console.log(data))
 
+
+//give instructions an ID of the meal ID(strMeal)
+//iterate through the cards
+//make the modals for them 
+    //theyre all hidden
+//looks for them one that has the ID
+    //make them active
+
+
+
+//grab p add an event listener for P
+//p changes the content 
