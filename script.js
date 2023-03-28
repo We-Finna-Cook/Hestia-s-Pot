@@ -102,6 +102,6 @@ search.addEventListener('submit', (e) => {
     searchInput.value = '';
 })
 
-// fetch('http://www.themealdb.com/api/json/v1/1/filter.php?c=goat').then(response => response.json())
+// fetch('http://www.themealdb.com/api/json/v1/1/categories.php').then(response => response.json())
 // .then(data => console.log(data))
 

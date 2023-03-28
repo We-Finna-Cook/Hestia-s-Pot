@@ -1,5 +1,6 @@
 body{
     background-color: rgb(255,250,235);
+    min-height: 100vh;
 }
 #nav{
     background-color:rgb(255,250,235)
