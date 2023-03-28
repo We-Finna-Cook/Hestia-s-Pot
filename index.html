@@ -44,28 +44,28 @@
     </section>
 
     <!-- tabs -->
-    
-        <div class="tabs is-boxed is-centered mt-4">
-            <ul>
-                <li class="is-active" data-target='Search'>
-                    <a>Search</a>
-                </li>
-                <li data-target='Categories'>
-                    <a>Categories</a>
-                </li>
-            </ul>
-        </div>
 
-         <!-- need to add tab content -->
-        <div class="px-2" id="tab-content">
-            <div id="Search">
-                <h1 class="is-size-3 has-text-centered my-5 has-text-weight-bold">Need a recipe? Search for a meal</h1>
+    <div class="tabs is-boxed is-centered mt-4">
+        <ul>
+            <li class="is-active" data-target='Search'>
+                <a>Search</a>
+            </li>
+            <li data-target='Categories'>
+                <a>Categories</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- need to add tab content -->
+    <div class="px-2" id="tab-content">
+        <div id="Search">
+            <h1 class="is-size-3 has-text-centered my-5 has-text-weight-bold">Need a recipe? Search for a meal</h1>
 
             <!-- search -->
             <div>
                 <form class='pb-6' id="search">
-                    <input class="input is-rounded is-warning" autocomplete="off" type="text" placeholder="Search for meals"
-                        id="searchBar">
+                    <input class="input is-rounded is-warning" autocomplete="off" type="text"
+                        placeholder="Search for meals" id="searchBar">
                 </form>
             </div>
 
@@ -74,29 +74,31 @@
                 <div id="searchColumns" class="columns mt-5 is-8 is-variable is-multiline is-centered">
                 </div>
             </div>
-              
-            </div>
-            <div id="Categories" class="is-hidden">
-              
-          </div>
-        </div>
 
-        <div class="modal" id="modal">
-            <div class="modal-background"></div>
-            <div class="modal-card">
-              <header class="modal-card-head">
-                <p id = "modalTitle" class="modal-card-title">Modal title</p>
-                <button class="delete" id='modalClose' aria-label="close"></button>
-              </header>
-              <section class="modal-card-body">
+        </div>
+        <div id="Categories" class="is-hidden">
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p id="modalTitle" class="modal-card-title">Modal title</p>
+            </header>
+            <section class="modal-card-body">
                 <!-- Content ... -->
                 <h3 class="has-text-weight-bold is-size-5">Ingredients</h3>
-                <p id="ingredientsText"></p>
+                <ul id="ingredientsText"></ul>
                 <h3 class="has-text-weight-bold my-5 is-size-5">Instructions</h3>
                 <p id="instructionsText"></p>
-              </section>
-            </div>
-          </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button" id="modalClose">Close</button>
+              </footer>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

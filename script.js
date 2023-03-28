@@ -101,6 +101,17 @@ search.addEventListener('submit', (e) => {
                     instructionA.addEventListener('click', () => {
                         modalTitle.innerText = meal.strMeal;
                         modalInstruction.innerText = meal.strInstructions;
+                        let ul = document.querySelector('#ingredientsText');
+                        ul.innerHTML = '';
+                        let i = 1;
+                        while (meal[`strIngredient${i}`] && i <= 20) {
+                            if (meal[`strIngredient${i}`].length > 1) {
+                                let li = document.createElement('li');
+                                li.innerText = meal[`strMeasure${i}`] + ' ' + meal[`strIngredient${i}`];
+                                ul.append(li);
+                            }
+                            i++;
+                        }
                         modalStatus.classList.add('is-active');
                     })
                 }
@@ -113,7 +124,7 @@ search.addEventListener('submit', (e) => {
 })
 
 let modalClose = document.querySelector('#modalClose');
-modalClose.addEventListener('click', () =>{
+modalClose.addEventListener('click', () => {
     modalStatus.classList.remove('is-active');
 })
 

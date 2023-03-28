@@ -29,6 +29,9 @@ body{
     justify-content: center;
 }
 
+#modal{
+    max-width: 100%;
+}
 /* #aboutSection{
     background-image: url(https://i.pinimg.com/564x/65/61/3f/65613f4193880e42fc48a271c7114200.jpg);
     background-position: center center;
