@@ -62,11 +62,16 @@
             <h1 class="is-size-3 has-text-centered my-5 has-text-weight-bold">Need a recipe? Search for a meal</h1>
 
             <!-- search -->
-            <div>
-                <form class='pb-6' id="search">
+            <div class="field has-addons" id='searchBarHolder'>
+                <form class='control pb-6' id="search">
                     <input class="input is-rounded is-warning" autocomplete="off" type="text"
                         placeholder="Search for meals" id="searchBar">
                 </form>
+                <p class="control">
+                    <button class="button is-info is-rounded" type="submit" form="search" id="searchButton">
+                        Search
+                    </button>
+                </p>
             </div>
 
             <div class="conatiner">
@@ -77,7 +82,22 @@
 
         </div>
         <div id="Categories" class="is-hidden">
-
+            <h1 class="is-size-3 has-text-centered my-5 has-text-weight-bold">Select A Category</h1>
+            <div class="select">
+                <select id="categoryDrop">
+                    <option value="">Categories</option>
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Vegan">Vegan</option>
+                    <option value="Chicken">Chicken</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Side">Side</option>
+                    <option value="Dessert">Dessert</option>
+                </select>
+            </div>
+            <div class="conatiner">
+                <div id="categoryColumns" class="columns mt-5 is-8 is-variable is-multiline is-centered">
+                </div>
+            </div>
         </div>
     </div>
 
@@ -96,7 +116,7 @@
             </section>
             <footer class="modal-card-foot">
                 <button class="button" id="modalClose">Close</button>
-              </footer>
+            </footer>
         </div>
     </div>
 

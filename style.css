@@ -1,19 +1,21 @@
-body{
-    background-color: rgb(255,250,235);
-    min-height: 100vh;
-}
-#nav{
-    background-color:rgb(255,250,235)
-}
-#sectionBg{
-    background-image: url(assets/bg.jpg) ;
-    background-position: center center;
-    background-repeat:  no-repeat;
-    /* background-attachment: fixed; */
-    background-size:  cover;
+body {
+    background-color: rgb(255, 250, 235);
+    min-height: 120vh;
 }
 
-#box h1{
+#nav {
+    background-color: rgb(255, 250, 235)
+}
+
+#sectionBg {
+    background-image: url(assets/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+}
+
+#box h1 {
     font-size: 3.5rem;
     text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
@@ -22,28 +24,51 @@ body{
     transform: scale(1.4);
 }
 
-#searchBar{
-    width: 60%;
-    margin: 0 auto;
+#searchBar {
+    width: 45vw;
+    /* margin: 0 auto;*/
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+#searchBarHolder {
     display: flex;
     justify-content: center;
 }
 
-#modal{
+#catButton{
+    /* display: flex;
+    justify-content: flex-start; */
+}
+
+#categoryDrop {
+    /* margin: 0 auto; */
+    width: 60vw;
+}
+
+.select {
+    display: flex;
+    justify-content: center;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+#modal {
     max-width: 100%;
 }
+
 /* #aboutSection{
     background-image: url(https://i.pinimg.com/564x/65/61/3f/65613f4193880e42fc48a271c7114200.jpg);
     background-position: center center;
     background-repeat:  no-repeat;
     /* background-attachment: fixed; */
-    /* background-size:  cover; */
+/* background-size:  cover; */
 /*}  */
 
-#aboutUsStrip{
+#aboutUsStrip {
     padding-bottom: 0;
 }
 
-#aboutSection{
+#aboutSection {
     padding-top: 40px;
 }
