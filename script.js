@@ -107,13 +107,13 @@ search.addEventListener('submit', (e) => {
                         while (meal[`strIngredient${i}`] && i <= 20) {
                             if (meal[`strIngredient${i}`].length > 1) {
                                 let li = document.createElement('li');
-                                li.innerText = meal[`strMeasure${i}`] + ' ' + meal[`strIngredient${i}`] + ' ';
                                 let label = document.createElement('label');
                                 label.classList.add('checkbox');
                                 let input = document.createElement('input');
                                 input.type = 'checkbox';
                                 label.append(input);
                                 li.append(label);
+                                li.append(' ' + meal[`strMeasure${i}`] + ' ' + meal[`strIngredient${i}`] + ' ')
                                 ul.append(li);
                             }
                             i++;
