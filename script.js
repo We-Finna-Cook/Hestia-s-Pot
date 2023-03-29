@@ -136,6 +136,9 @@ modalClose.addEventListener('click', () => {
 
 // fetch('http://www.themealdb.com/api/json/v1/1/categories.php').then(response => response.json())
 // .then(data => console.log(data))
+// fetch('http://www.themealdb.com/api/json/v1/1/lookup.php?i=52965').then(response => response.json())
+// .then(data => console.log(data))
+//52965
 
 
 //give instructions an ID of the meal ID(strMeal)
