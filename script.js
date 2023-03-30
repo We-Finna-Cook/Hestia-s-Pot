@@ -237,6 +237,8 @@ const moiContainer = document.querySelector('#moiContainer')
 const moiSection = document.querySelector('#mealOfInspiration')
 let moiData = document.querySelector('#moiData');
 const moiTitle = document.querySelector('#moiTitle')
+const moiIngredientsTitle = document.querySelector('#moiIngredientsTitle');
+const moiInstructionsTitle = document.querySelector('#moiInstructionsTitle');
 
 fetch('https://www.themealdb.com/api/json/v1/1/random.php')
     .then(response => response.json())
@@ -265,6 +267,43 @@ fetch('https://www.themealdb.com/api/json/v1/1/random.php')
             }
         }
     })
+
+    const moiButtonDiv = document.createElement('div')
+   const moiButton = document.createElement('button');
+   moiButton.id = 'moiButton'
+   moiButton.classList.add('button','is-rounded', 'is-info');
+   moiButton.innerText = 'Show More';
+   moiButtonDiv.style.textAlign = 'center';
+    moiButtonDiv.append(moiButton)
+    moiInstructions.append(moiButtonDiv)
+   moiContainer.append(moiButtonDiv);
+
+moiIngredientsTitle.classList.add('is-hidden')
+moiData.classList.add('is-hidden')
+moiInstructionsTitle.classList.add('is-hidden')
+moiInstructions.classList.add('is-hidden');
+
+   moiButton.addEventListener('click', () => {
+    if(moiButton.innerText === "Show More"){
+    moiIngredientsTitle.classList.remove('is-hidden');
+    moiData.classList.remove('is-hidden');
+    moiInstructionsTitle.classList.remove('is-hidden');
+    moiInstructions.classList.remove('is-hidden');
+    moiButton.innerText = 'Show Less';
+    }else if(moiButton.innerText === 'Show Less'){
+        // moiButton.innerText = 'Show Less';
+    moiIngredientsTitle.classList.add('is-hidden')
+    moiData.classList.add('is-hidden')
+    moiInstructionsTitle.classList.add('is-hidden')
+    moiInstructions.classList.add('is-hidden');
+    moiButton.innerText = "Show More"
+    }
+   })
+
+
+
+
+
 
 
 // fetch('http://www.themealdb.com/api/json/v1/1/categories.php').then(response => response.json())
