@@ -29,6 +29,7 @@
         <!-- navbar options -->
         <div class="navbar-menu" id="nav-links">
             <div class="navbar-end">
+                <a href='#tab-content' class="navbar-item">Search</a>
                 <a href='index.html' class="navbar-item">Home</a>
                 <a href='about.html' class="navbar-item">About Us</a>
             </div>
@@ -42,6 +43,21 @@
             <h2 class="is-size-4 has-text-centered has-text-white">#1 Place For Recipes</h1>
         </div>
     </section>
+
+    <div class="section mt-2" id="mealOfInspiration">
+        <p class="has-text-centered title has-text-weight-bold">Meal Of Inspiration</p>
+        <div id = "moiContainer" class="box">
+            <div class="title has-text-centered" id="moiTitle"></div>
+            
+                <figure figure class="column is-flex is-justify-content-center is-align-items-center">
+                    <img id ="moiImg" src="" alt="" class="is-rounded"/>
+                </figure>
+                <h1 class="is-size-4 has-text-weight-bold">Ingredients</h1>
+                <div id="moiData" class="column"></div>
+                <h1 class="is-size-4 has-text-weight-bold">Instructions</h1>
+            <p id="moiInstructions"></p>
+        </div>
+    </div>
 
     <!-- tabs -->
 
@@ -119,7 +135,7 @@
         </div>
     </div>
     </hr>
-    <footer class="footer">
+    <footer class="footer mt-6">
         <div class="content has-text-centered">
             <p>
                 <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
@@ -128,20 +144,6 @@
             </p>
         </div>
     </footer>
-
-    <div class="has-text-centered is-size-1 has-text-weight-bold-light">Meal Of Inspiration ⬇</div>
-    <div class="section" id="mealOfInspiration">
-        <div id = "moiContainer" class="box">
-            <div class="title has-text-centered" id="moiTitle"></div>
-            
-                <figure figure class="column is-flex is-justify-content-center is-align-items-center">
-                    <img id ="moiImg" src="" alt="" class="is-rounded"/>
-                </figure>
-                <div id="moiData" class="column"></div>
-          
-            <div id="moiInstructions"></div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
