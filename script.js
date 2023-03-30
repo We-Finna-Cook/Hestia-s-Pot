@@ -97,7 +97,7 @@ search.addEventListener('submit', (e) => {
                         videoA.target = '_blank';
                         videoP.appendChild(videoA);
                         cardFooter.appendChild(videoP);
-                    }
+                    } 
                     searchColumns.appendChild(columnDiv);
 
                     instructionA.addEventListener('click', () => {
