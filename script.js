@@ -134,6 +134,43 @@ modalClose.addEventListener('click', () => {
     modalStatus.classList.remove('is-active');
 })
 
+const moiImg = document.querySelector('#moiImg')
+const moiInstructions = document.querySelector('#moiInstructions')
+const moiColumns = document.querySelector('#moiColumns')
+const moiContainer = document.querySelector('#moiContainer')
+const moiSection = document.querySelector('#mealOfInspiration')
+let moiData = document.querySelector('#moiData');
+const moiTitle = document.querySelector('#moiTitle')
+
+fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+        moiImg.src = data.meals[0].strMealThumb
+        moiInstructions.innerText = data.meals[0].strInstructions;
+        moiTitle.innerText = data.meals[0].strMeal
+        let i = 1;
+        let ul = document.createElement('ul')
+        for (let meal of data.meals) {
+            while (meal[`strIngredient${i}`] && i <= 20) {
+                if (meal[`strIngredient${i}`].length > 1) {
+                    let li = document.createElement('li');
+                    let label = document.createElement('label');
+                    label.classList.add('checkbox');
+                    let input = document.createElement('input');
+                    input.type = 'checkbox';
+                    label.append(input);
+                    li.append(label);
+                     li.append(' ' + meal[`strMeasure${i}`] + ' ' + meal[`strIngredient${i}`] + ' ')
+                     ul.append(li)
+                     moiData.append(ul)
+                }
+                i++;
+            }
+        }
+    })
+
+
 // fetch('http://www.themealdb.com/api/json/v1/1/categories.php').then(response => response.json())
 // .then(data => console.log(data))
 // fetch('http://www.themealdb.com/api/json/v1/1/lookup.php?i=52965').then(response => response.json())

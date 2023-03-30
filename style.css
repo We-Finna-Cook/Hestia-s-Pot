@@ -47,3 +47,33 @@ body{
 #aboutSection{
     padding-top: 40px;
 }
+
+#moiColumns {
+    display: flex;
+    justify-content: center;
+  }
+
+  #moiContainer {
+    width: 50%;
+  }
+  
+
+   #moiImg{
+    width: 80%;
+   }
+
+   @media screen and (max-width: 768px) {
+    #moiImg{
+        width: 100%;
+    }
+
+    #moiContainer {
+        width: 100%;
+      }
+      
+   }
+
+   #mealOfInspiration{
+    display:flex;
+    justify-content: center;
+   }
