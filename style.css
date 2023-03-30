@@ -36,7 +36,7 @@ body {
     justify-content: center;
 }
 
-#catButton{
+#catButton {
     /* display: flex;
     justify-content: flex-start; */
 }
@@ -53,14 +53,38 @@ body {
     margin: 0 auto;
 }
 
-.footer{
-    background-color:rgb(255,105,97);
+.footer {
+    background-color: rgb(255, 105, 97);
 }
 
-#mealOfInspiration{
-    display:flex;
+#mealOfInspiration {
+    display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#hestiaSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80vw;
+    margin: 20px auto;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    height: auto;
+    background-color: White;
+}
+
+
+#hestiaText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#hestiaSection img {
+    margin: 0;
+    padding: 0;
 }
 
 #modal {
@@ -86,29 +110,29 @@ body {
 #moiColumns {
     display: flex;
     justify-content: center;
-  }
+}
 
-  #moiContainer {
+#moiContainer {
     width: 50%;
-  }
-  
+}
 
-   #moiImg{
+
+#moiImg {
     width: 80%;
-   }
+}
 
-   @media screen and (max-width: 768px) {
-    #moiImg{
+@media screen and (max-width: 768px) {
+    #moiImg {
         width: 100%;
     }
 
     #moiContainer {
         width: 100%;
-      }
-      
-   }
+    }
 
-   #mealOfInspiration{
-    display:flex;
+}
+
+#mealOfInspiration {
+    display: flex;
     justify-content: center;
-   }
+}
