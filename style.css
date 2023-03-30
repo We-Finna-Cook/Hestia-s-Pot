@@ -3,6 +3,14 @@ body {
     min-height: 120vh;
 }
 
+hr{
+    color:black;
+    background-color:black;
+    width:70%;
+    height: 1px;
+    margin: 0 auto;
+}
+
 #nav {
     background-color: rgb(255, 250, 235)
 }
@@ -36,11 +44,6 @@ body {
     justify-content: center;
 }
 
-#catButton {
-    /* display: flex;
-    justify-content: flex-start; */
-}
-
 #categoryDrop {
     /* margin: 0 auto; */
     width: 60vw;
@@ -54,7 +57,7 @@ body {
 }
 
 .footer {
-    background-color: rgb(255, 105, 97);
+    background-color: lightblue;
 }
 
 #mealOfInspiration {
@@ -67,7 +70,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 80vw;
-    margin: 20px auto;
+    margin: 50px auto;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     height: auto;
     background-color: White;
@@ -78,13 +81,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 20px;
 }
 
-#hestiaSection img {
+#hestiaImage {
+    display:flex;
+    align-items: flex-end;
     margin: 0;
     padding: 0;
+    bottom:0px;
+    filter: drop-shadow(5px 5px 5px #666666);
 }
 
 #modal {
