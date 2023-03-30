@@ -35,7 +35,7 @@ tabs.forEach((tab) => {
         if (target === 'Oshaun') {
             currentAboutPicture.src = 'assets/MARCY_HEADSHOTS-525.jpg';;
         } else if (target === 'Randy') {
-            currentAboutPicture.src = 'assets/logo.png';
+            currentAboutPicture.src = 'assets/randy.jpg';
         }
     })
 })
