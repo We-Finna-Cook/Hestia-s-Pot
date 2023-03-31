@@ -116,6 +116,19 @@ hr{
     padding-top: 40px;
 }
 
+
+#cardsDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Categories{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #moiColumns {
     display: flex;
     justify-content: center;
@@ -154,3 +167,13 @@ hr{
         justify-content: center;
     }
 }
+
+/* @media screen and (min-width: 768px) {
+
+	.columns {
+	    margin-left: -2rem;
+	    margin-right: -2rem;
+	    margin-top: -2rem;
+	}
+
+} */

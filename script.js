@@ -13,6 +13,7 @@ let modalInstruction = document.querySelector('#instructionsText');
 let category = document.querySelector('#categoryDrop')
 let categoryColumns = document.querySelector('#categoryColumns');
 
+
 burger.addEventListener('click', (event) => {
     event.preventDefault();
     navbarMenu.classList.toggle('is-active');
@@ -77,6 +78,7 @@ search.addEventListener('submit', (e) => {
                     dishName.classList.add('title');
                     dishName.innerText = meal.strMeal;
                     cardContentDiv.appendChild(dishName);
+                    
 
 
                     let instructionP = document.createElement('p');
@@ -98,6 +100,7 @@ search.addEventListener('submit', (e) => {
                         videoP.appendChild(videoA);
                         cardFooter.appendChild(videoP);
                     } 
+                    columnDiv.style.maxWidth = '100vw';
                     searchColumns.appendChild(columnDiv);
 
                     instructionA.addEventListener('click', () => {
@@ -199,6 +202,7 @@ category.addEventListener("change", () => {
                             videoP.appendChild(videoA);
                             cardFooter.appendChild(videoP);
                         }
+                        columnDiv.style.maxWidth = '100vw';
                         categoryColumns.appendChild(columnDiv);
 
                         instructionA.addEventListener('click', () => {
