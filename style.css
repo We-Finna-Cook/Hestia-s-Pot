@@ -3,10 +3,10 @@ body {
     min-height: 120vh;
 }
 
-hr{
-    color:black;
-    background-color:black;
-    width:70%;
+hr {
+    color: black;
+    background-color: black;
+    width: 70%;
     height: 1px;
     margin: 0 auto;
 }
@@ -88,11 +88,11 @@ hr{
 }
 
 #hestiaImage {
-    display:flex;
+    display: flex;
     align-items: flex-end;
     margin: 0;
     padding: 0;
-    bottom:0px;
+    bottom: 0px;
     filter: drop-shadow(5px 5px 5px #666666);
 }
 
@@ -117,7 +117,7 @@ hr{
 }
 
 
-#cardsDiv{
+/* #cardsDiv{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,7 +127,8 @@ hr{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
+
 
 #moiColumns {
     display: flex;
@@ -159,21 +160,27 @@ hr{
     justify-content: center;
 }
 
-@media only screen and (max-width: 1020px){
-    #hestiaSection{
+@media only screen and (max-width: 1020px) {
+    #hestiaSection {
         grid-template-columns: 1fr;
     }
+
     #hestiaImage {
         justify-content: center;
     }
 }
 
-/* @media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
 
-	.columns {
-	    margin-left: -2rem;
-	    margin-right: -2rem;
-	    margin-top: -2rem;
-	}
+    #cardsDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-} */
+    #Categories {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
