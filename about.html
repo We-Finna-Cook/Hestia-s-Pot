@@ -1,89 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Document</title>
 </head>
+
 <body>
-    <!-- logo -->
-    <nav class="navbar is-fixed-top is-white" id="nav">
-        <div class="navbar-brand">
-            <a class="navbar-item py-2" href="index.html">
-                <img src="assets/logo.png" style="max-height: 70px"/>
-            </a>
-        
-        <!-- hamburger -->
-        <a class="navbar-burger mt-4" id="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
-        </div>
-        
-        <!-- navbar options -->
-        <div class="navbar-menu" id="nav-links">
-            <div class="navbar-end">
-                <a href= 'index.html' class="navbar-item">Home</a>
-                <a class="navbar-item">About Us</a>
+  <!-- logo -->
+  <nav class="navbar is-fixed-top is-white" id="nav">
+    <div class="navbar-brand">
+      <a class="navbar-item py-2" href="index.html">
+        <img src="assets/logo.png" style="max-height: 70px" />
+      </a>
+
+      <!-- hamburger -->
+      <a class="navbar-burger mt-4" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+
+    <!-- navbar options -->
+    <div class="navbar-menu" id="nav-links">
+      <div class="navbar-end">
+        <a href='index.html' class="navbar-item">Home</a>
+        <a class="navbar-item">About Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section mt-6 has-text-centered" id="aboutUsStrip">
+    <h1 class="is-size-2 has-text-weight-bold">
+      Who Are We?
+    </h1>
+  </section>
+
+  <!-- section for tabbed -->
+  <section class="section" id="aboutSection">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-7">
+          <!-- tabbed names and style -->
+          <div class="tabs is-boxed">
+            <ul>
+              <li class="is-active" data-target='Oshaun'>
+                <a>Oshaun</a>
+              </li>
+              <li data-target='Randy'>
+                <a>Randy</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- tabbed content -->
+          <div class="px-2" id="tab-content">
+            <div id="Oshaun">
+              <h3 class="is-size-5 title">O'Shaun</h3>
+              <p>Hello and welcome to our recipe website! My name is O'Shaun and I'm excited to be a part of this
+                project. As a Software Engineer, I'm constantly seeking out new challenges and opportunities to learn
+                and grow. I believe that technology can be a powerful tool to make our lives more efficient and
+                connected. That's why I'm excited to be a part of this project, where we can leverage the latest tools
+                and techniques to create a platform that inspires and empowers people to cook and create. I believe that
+                a balanced lifestyle is essential to our overall well-being, and that includes eating healthy, delicious
+                meals.Thank you for visiting our website and I hope you find our recipes and resources helpful and
+                inspiring. If you have any questions or feedback, please don't hesitate to reach out to me.</p>
+              <p>Best,
+                O'Shaun</p>
             </div>
-        </div>
-    </nav>
-
-    <section class="section mt-6 has-text-centered" id="aboutUsStrip">
-            <h1 class="is-size-2 has-text-weight-bold">
-                Who Are We?
-            </h1>
-    </section>
-
-    <!-- section for tabbed -->
-    <section class="section" id="aboutSection">
-        <div class="container">
-          <div class="columns">
-            <div class="column is-7">
-              <!-- tabbed names and style -->
-              <div class="tabs is-boxed">
-                <ul>
-                  <li class="is-active" data-target='Oshaun'>
-                    <a>Oshaun</a>
-                  </li>
-                  <li data-target='Randy'>
-                    <a>Randy</a>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- tabbed content -->
-              <div class="px-2" id="tab-content">
-                <div id="Oshaun">
-                  <h3 class="is-size-5 title">O'Shaun</h3>
-                  <p>Hello and welcome to our recipe website! My name is O'Shaun and I'm excited to be a part of this project. As a Software Engineer, I'm constantly seeking out new challenges and opportunities to learn and grow. I believe that technology can be a powerful tool to make our lives more efficient and connected. That's why I'm excited to be a part of this project, where we can leverage the latest tools and techniques to create a platform that inspires and empowers people to cook and create. I believe that a balanced lifestyle is essential to our overall well-being, and that includes eating healthy, delicious meals.Thank you for visiting our website and I hope you find our recipes and resources helpful and inspiring. If you have any questions or feedback, please don't hesitate to reach out to me.</p>
-                  <p>Best,
-                    O'Shaun</p>
-                </div>
-                <div id="Randy" class="is-hidden">
-                  <h3 class="is-size-5 title">Randy</h3>
-                  <p>Hello and welcome to our recipe website! My name is Randy and I'm thrilled to be working on this project. As a Software Engineer, I'm dedicated to creating visually impressive projects that are both creative and efficient. I believe that software development is an art form and that the best projects are those that seamlessly blend aesthetics with functionality. I am dedicated to creating visually stunning projects that are not only efficient but also elevate the user experience to a whole new level.Thank you for visiting our website and I hope you find our recipes and resources helpful and inspiring. If you have any questions or feedback, please don't hesitate to reach out to me.</p>
-                </div>
-              </div>
+            <div id="Randy" class="is-hidden">
+              <h3 class="is-size-5 title">Randy</h3>
+              <p>Hello and welcome to our recipe website! My name is Randy and I'm thrilled to be working on this
+                project. As a Software Engineer, I'm dedicated to creating visually impressive projects that are both
+                creative and efficient. I believe that software development is an art form and that the best projects
+                are those that seamlessly blend aesthetics with functionality. I am dedicated to creating visually
+                stunning projects that are not only efficient but also elevate the user experience to a whole new
+                level.Thank you for visiting our website and I hope you find our recipes and resources helpful and
+                inspiring. If you have any questions or feedback, please don't hesitate to reach out to me.</p>
             </div>
-
-            <!-- image -->
-            <div id="secondColumn" class="column is-5">
-                <div class="has-text-centered has-background-warning-light" style="display: flex; justify-content: center; align-items: center; height: 100%;">
-                  <figure class="image is-inline-block; ">
-                    <img id="about-picture" class="is-rounded" style="width:350px;" src="assets/MARCY_HEADSHOTS-525.jpg" alt="Picture of Oshaun"/>
-                  </figure>
-                </div>
-              </div>
           </div>
         </div>
-      </section>
 
-      <script src="script.js"></script>
-      
+        <!-- image -->
+        <div id="secondColumn" class="column is-5">
+          <div class="has-text-centered has-background-warning-light"
+            style="display: flex; justify-content: center; align-items: center; height: 100%;">
+            <figure class="image is-inline-block; ">
+              <img id="about-picture" class="is-rounded" style="width:350px;" src="assets/MARCY_HEADSHOTS-525.jpg"
+                alt="Picture of Oshaun" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer id="footer" class="footer mt-6">
+    <div class="content">
+      <!-- <h1 class="is-size-5 has-text-weight-bold has-text-white">Linkedin's</h1>
+            <p><a href="https://www.linkedin.com/in/r-pichardo/" class="has-text-white mb-1">Randy</a>
+                <br>
+               <a href="https://www.linkedin.com/in/r-pichardo/" class="has-text-white">Oshaun</a></p> -->
+      <p class="has-text-centered">© 2023 Hestia's Pot. All Rights Reserved.</p>
+      <p class="has-text-centered">Data provided by <a href="https://www.themealdb.com/api.php" target="_blank"
+          class="has-text-weight-bold has-text-white">TheMealDB API</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
+
 </html>

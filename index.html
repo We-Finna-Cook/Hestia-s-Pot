@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald" />
 </head>
 
 <body>
@@ -44,29 +46,31 @@
         </div>
     </section>
     <hr class="is-dark mt-6">
-    <section id="hestiaSection">
+    <section id="hestiaSection" data-aos="fade-up">
         <div id="hestiaText">
             <h1 class="title has-text-weight-bold">Who is Hestia?</h1>
             <p>
-                Hestia, a Greek goddess, was linked to the hearth, home, and family. She was responsible for maintaining the fire and promoting domestic harmony, and her connection to cooking and food made her a popular figure in Greek culture.
+                Hestia, a Greek goddess, was linked to the hearth, home, and family. She was responsible for maintaining
+                the fire and promoting domestic harmony, and her connection to cooking and food made her a popular
+                figure in Greek culture.
             </p>
         </div>
         <div id="hestiaImage">
-            <img src="assets/hestia.png"/>
+            <img src="assets/hestia.png" />
         </div>
     </section>
     <hr class="is-dark mt-6">
-    <div class="section mt-2" id="mealOfInspiration">
+    <div class="section mt-2" id="mealOfInspiration" data-aos="fade-up">
         <p class="has-text-centered title has-text-weight-bold">Meal Of Inspiration</p>
-        <div id = "moiContainer" class="box">
+        <div id="moiContainer" class="box">
             <div class="title has-text-centered" id="moiTitle"></div>
-            
-                <figure figure class="column is-flex is-justify-content-center is-align-items-center">
-                    <img id ="moiImg" src="" alt="" class="is-rounded"/>
-                </figure>
-                <h1 id='moiIngredientsTitle' class="is-size-4 has-text-weight-bold">Ingredients</h1>
-                <div id="moiData" class="column"></div>
-                <h1 id='moiInstructionsTitle' class="is-size-4 has-text-weight-bold">Instructions</h1>
+
+            <figure figure class="column is-flex is-justify-content-center is-align-items-center">
+                <img id="moiImg" src="" alt="" class="is-rounded" />
+            </figure>
+            <h1 id='moiIngredientsTitle' class="is-size-4 has-text-weight-bold">Ingredients</h1>
+            <div id="moiData" class="column"></div>
+            <h1 id='moiInstructionsTitle' class="is-size-4 has-text-weight-bold">Instructions</h1>
             <p id="moiInstructions"></p>
         </div>
     </div>
@@ -109,7 +113,7 @@
             </div>
 
         </div>
-        <div id="Categories" class="is-hidden">
+        <div id="Categories" class="is-hidden pb-6">
             <h1 class="is-size-3 has-text-centered my-5 has-text-weight-bold">Select a Category</h1>
             <div class="select  is-warning">
                 <select id="categoryDrop">
@@ -149,17 +153,18 @@
     </div>
 
     </hr>
-    <footer class="footer mt-6">
-        <div class="content has-text-centered">
-            <p>
-                <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-            </p>
+    <footer id="footer" class="footer mt-6">
+        <div class="content">
+               <p class="has-text-centered">© 2023 Hestia's Pot. All Rights Reserved.</p>
+               <p class="has-text-centered">Data provided by <a href="https://www.themealdb.com/api.php" target="_blank" class="has-text-weight-bold has-text-white">TheMealDB API</a></p>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

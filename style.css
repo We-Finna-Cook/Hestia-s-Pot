@@ -1,6 +1,6 @@
 body {
     background-color: rgb(255, 250, 235);
-    min-height: 120vh;
+    min-height: 100vh;
 }
 
 hr {
@@ -12,7 +12,8 @@ hr {
 }
 
 #nav {
-    background-color: rgb(255, 250, 235)
+    background-color: rgb(255, 250, 235);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 #sectionBg {
@@ -57,8 +58,16 @@ hr {
     margin: 0 auto;
 }
 
-.footer {
-    background-color: rgb(246, 224, 154);
+#footer {
+    background: rgb(61, 61, 61);
+    height: 200px;
+    background: linear-gradient(326deg, rgba(61, 61, 61, 1) 35%, rgba(34, 34, 34, 1) 100%);
+    color: white;
+    border-radius: 100px 0 0 0;
+}
+
+#footer a:hover{
+    text-decoration: underline;
 }
 
 #mealOfInspiration {
@@ -74,7 +83,8 @@ hr {
     margin: 50px auto;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     height: auto;
-    background-color: White;
+    border-radius: 20px;
+    background-color: white;
 }
 
 
@@ -110,6 +120,7 @@ hr {
 
 #aboutUsStrip {
     padding-bottom: 0;
+    padding-top: 60px;
 }
 
 #aboutSection {
