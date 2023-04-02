@@ -76,6 +76,7 @@ search.addEventListener('submit', (e) => {
                     cardImageDiv.appendChild(foodImage);
                     let dishName = document.createElement('p')
                     dishName.classList.add('title');
+                    dishName.style.fontFamily = 'Oswald';
                     dishName.innerText = meal.strMeal;
                     cardContentDiv.appendChild(dishName);
                     
@@ -101,6 +102,8 @@ search.addEventListener('submit', (e) => {
                         cardFooter.appendChild(videoP);
                     } 
                     columnDiv.style.maxWidth = '100vw';
+                    columnDiv.setAttribute('data-aos', 'fade-in');
+                    columnDiv.setAttribute('data-aos-duration', '1000')
                     searchColumns.appendChild(columnDiv);
 
                     instructionA.addEventListener('click', () => {
@@ -180,6 +183,7 @@ category.addEventListener("change", () => {
                         let dishName = document.createElement('p')
                         dishName.classList.add('title');
                         dishName.innerText = data.meals[0].strMeal;
+                        dishName.style.fontFamily = 'Oswald';
                         cardContentDiv.appendChild(dishName);
 
 
@@ -203,6 +207,8 @@ category.addEventListener("change", () => {
                             cardFooter.appendChild(videoP);
                         }
                         columnDiv.style.maxWidth = '100vw';
+                        columnDiv.setAttribute('data-aos', 'fade-in');
+                        columnDiv.setAttribute('data-aos-duration', '1000');
                         categoryColumns.appendChild(columnDiv);
 
                         instructionA.addEventListener('click', () => {
@@ -275,7 +281,7 @@ fetch('https://www.themealdb.com/api/json/v1/1/random.php')
     const moiButtonDiv = document.createElement('div')
    const moiButton = document.createElement('button');
    moiButton.id = 'moiButton'
-   moiButton.classList.add('button','is-rounded', 'is-info');
+   moiButton.classList.add('button','is-rounded', 'is-info', 'mt-3');
    moiButton.innerText = 'Show More';
    moiButtonDiv.style.textAlign = 'center';
     moiButtonDiv.append(moiButton)
@@ -310,8 +316,8 @@ moiInstructions.classList.add('is-hidden');
 
 
 
-// fetch('http://www.themealdb.com/api/json/v1/1/categories.php').then(response => response.json())
-// .then(data => console.log(data))
+fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i=52959').then(response => response.json())
+.then(data => console.log(data))
 
 // fetch('http://www.themealdb.com/api/json/v1/1/lookup.php?i=52965').then(response => response.json())
 // .then(data => console.log(data))
