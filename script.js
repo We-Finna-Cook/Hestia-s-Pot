@@ -79,7 +79,7 @@ search.addEventListener('submit', (e) => {
                     dishName.style.fontFamily = 'Oswald';
                     dishName.innerText = meal.strMeal;
                     cardContentDiv.appendChild(dishName);
-                    
+
 
 
                     let instructionP = document.createElement('p');
@@ -100,7 +100,7 @@ search.addEventListener('submit', (e) => {
                         videoA.target = '_blank';
                         videoP.appendChild(videoA);
                         cardFooter.appendChild(videoP);
-                    } 
+                    }
                     columnDiv.style.maxWidth = '100vw';
                     columnDiv.setAttribute('data-aos', 'fade-in');
                     columnDiv.setAttribute('data-aos-duration', '1000')
@@ -249,14 +249,20 @@ let moiData = document.querySelector('#moiData');
 const moiTitle = document.querySelector('#moiTitle')
 const moiIngredientsTitle = document.querySelector('#moiIngredientsTitle');
 const moiInstructionsTitle = document.querySelector('#moiInstructionsTitle');
-
+const moiVideo = document.querySelector('#moiVideo')
+let videoLink;
 fetch('https://www.themealdb.com/api/json/v1/1/random.php')
     .then(response => response.json())
     .then(data => {
         console.log(data)
         moiImg.src = data.meals[0].strMealThumb
         moiInstructions.innerText = data.meals[0].strInstructions;
-        moiTitle.innerText = data.meals[0].strMeal
+        moiTitle.innerText = data.meals[0].strMeal;
+        if (data.meals[0].strYoutube) {
+            videoLink = data.meals[0].strYoutube;
+            videoLink = videoLink.replace("https://www.youtube.com/watch?v=", "https://www.youtube.com/embed/")
+            moiVideo.src = videoLink;
+        }
         let i = 1;
         let ul = document.createElement('ul')
         for (let meal of data.meals) {
@@ -269,46 +275,52 @@ fetch('https://www.themealdb.com/api/json/v1/1/random.php')
                     input.type = 'checkbox';
                     label.append(input);
                     li.append(label);
-                     li.append(' ' + meal[`strMeasure${i}`] + ' ' + meal[`strIngredient${i}`] + ' ')
-                     ul.append(li)
-                     moiData.append(ul)
+                    li.append(' ' + meal[`strMeasure${i}`] + ' ' + meal[`strIngredient${i}`] + ' ')
+                    ul.append(li)
+                    moiData.append(ul)
                 }
                 i++;
             }
         }
     })
 
-    const moiButtonDiv = document.createElement('div')
-   const moiButton = document.createElement('button');
-   moiButton.id = 'moiButton'
-   moiButton.classList.add('button','is-rounded', 'is-info', 'mt-3');
-   moiButton.innerText = 'Show More';
-   moiButtonDiv.style.textAlign = 'center';
-    moiButtonDiv.append(moiButton)
-    moiInstructions.append(moiButtonDiv)
-   moiContainer.append(moiButtonDiv);
+const moiButtonDiv = document.createElement('div')
+const moiButton = document.createElement('button');
+moiButton.id = 'moiButton'
+moiButton.classList.add('button', 'is-rounded', 'is-info', 'mt-3');
+moiButton.innerText = 'Show More';
+moiButtonDiv.style.textAlign = 'center';
+moiButtonDiv.append(moiButton)
+moiInstructions.append(moiButtonDiv)
+moiContainer.append(moiButtonDiv);
 
 moiIngredientsTitle.classList.add('is-hidden')
 moiData.classList.add('is-hidden')
 moiInstructionsTitle.classList.add('is-hidden')
 moiInstructions.classList.add('is-hidden');
 
-   moiButton.addEventListener('click', () => {
-    if(moiButton.innerText === "Show More"){
-    moiIngredientsTitle.classList.remove('is-hidden');
-    moiData.classList.remove('is-hidden');
-    moiInstructionsTitle.classList.remove('is-hidden');
-    moiInstructions.classList.remove('is-hidden');
-    moiButton.innerText = 'Show Less';
-    }else if(moiButton.innerText === 'Show Less'){
+moiButton.addEventListener('click', () => {
+    if (moiButton.innerText === "Show More") {
+        moiIngredientsTitle.classList.remove('is-hidden');
+        moiData.classList.remove('is-hidden');
+        moiInstructionsTitle.classList.remove('is-hidden');
+        moiInstructions.classList.remove('is-hidden');
+        if (videoLink) {
+            document.querySelector('#moiVideoDiv').classList.remove('is-hidden');
+        }
+        moiButton.innerText = 'Show Less';
+    } else if (moiButton.innerText === 'Show Less') {
         // moiButton.innerText = 'Show Less';
-    moiIngredientsTitle.classList.add('is-hidden')
-    moiData.classList.add('is-hidden')
-    moiInstructionsTitle.classList.add('is-hidden')
-    moiInstructions.classList.add('is-hidden');
-    moiButton.innerText = "Show More"
+        moiIngredientsTitle.classList.add('is-hidden')
+        moiData.classList.add('is-hidden')
+        moiInstructionsTitle.classList.add('is-hidden')
+        moiInstructions.classList.add('is-hidden');
+        if (videoLink) {
+            document.querySelector('#moiVideoDiv').classList.add('is-hidden');
+        }
+        moiButton.innerText = "Show More"
     }
-   })
+})
 
 
 
@@ -317,7 +329,7 @@ moiInstructions.classList.add('is-hidden');
 
 
 fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i=52959').then(response => response.json())
-.then(data => console.log(data))
+    .then(data => console.log(data))
 
 // fetch('http://www.themealdb.com/api/json/v1/1/lookup.php?i=52965').then(response => response.json())
 // .then(data => console.log(data))

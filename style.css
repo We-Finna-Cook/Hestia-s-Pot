@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(255, 250, 235);
+    background-color: #f5f5f5;
     min-height: 100vh;
 }
 
@@ -12,7 +12,7 @@ hr {
 }
 
 #nav {
-    background-color: rgb(255, 250, 235);
+    background-color: #f5f5f5;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
@@ -59,14 +59,15 @@ hr {
 }
 
 #footer {
-    background: rgb(61, 61, 61);
+    background: rgb(11, 91, 155);
+    background: linear-gradient(336deg, rgba(11, 91, 155, 1) 35%, rgba(61, 142, 208, 1) 100%);
     height: 200px;
-    background: linear-gradient(326deg, rgba(61, 61, 61, 1) 35%, rgba(34, 34, 34, 1) 100%);
     color: white;
     border-radius: 100px 0 0 0;
+    bottom:0;
 }
 
-#footer a:hover{
+#footer a:hover {
     text-decoration: underline;
 }
 
@@ -75,6 +76,10 @@ hr {
     flex-direction: column;
     align-items: center;
 }
+#moiVideo{
+    margin: 0 auto;
+}
+
 
 #hestiaSection {
     display: grid;
@@ -125,6 +130,10 @@ hr {
 
 #aboutSection {
     padding-top: 40px;
+}
+
+.card-footer-item a {
+    color: #3e8ed0 !important;
 }
 
 

@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hestia's Pot</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald" />
+    <link rel="icon" href="assets/tabIcon.png">
 </head>
 
 <body>
@@ -72,6 +73,10 @@
             <div id="moiData" class="column"></div>
             <h1 id='moiInstructionsTitle' class="is-size-4 has-text-weight-bold">Instructions</h1>
             <p id="moiInstructions"></p>
+            <div id='moiVideoDiv' class="is-hidden">
+                <p class="is-size-4 has-text-weight-bold py-3">Youtube</p>
+                <iframe id="moiVideo"></iframe>
+            </div>
         </div>
     </div>
 
@@ -96,7 +101,7 @@
             <!-- search -->
             <div class="field has-addons" id='searchBarHolder'>
                 <form class='control pb-6' id="search">
-                    <input class="input is-rounded is-warning" autocomplete="off" type="text"
+                    <input class="input is-rounded is-info" autocomplete="off" type="text"
                         placeholder="Search for meals" id="searchBar">
                 </form>
                 <p class="control">
@@ -115,7 +120,7 @@
         </div>
         <div id="Categories" class="is-hidden pb-6">
             <h1 class="is-size-3 has-text-centered my-5 has-text-weight-bold">Select a Category</h1>
-            <div class="select  is-warning">
+            <div class="select is-rounded is-info">
                 <select id="categoryDrop">
                     <option value="">Categories</option>
                     <option value="Breakfast">Breakfast</option>
