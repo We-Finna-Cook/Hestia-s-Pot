@@ -64,6 +64,7 @@ hr {
     height: 200px;
     color: white;
     border-radius: 100px 0 0 0;
+    bottom:0;
 }
 
 #footer a:hover {
