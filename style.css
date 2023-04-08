@@ -3,6 +3,10 @@ body {
     min-height: 100vh;
 }
 
+#aboutMain{
+    min-height:80vh;
+}
+
 hr {
     color: black;
     background-color: black;
